@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listes des annonces</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Listes des annonces</h1>
+    <ul class="annonces-list">
+      {{#annonces}} 
+        <li class="annonce-item">
+          <h3>{{titre}}</h3>
+          <p>{{description}}</p>
+          <p><strong>Prix:</strong> {{prix}}</p>
+          <p><strong>Localisation:</strong> {{localisation}}</p>
+          <p><strong>Catégorie:</strong> {{categorie}}</p>
+          <a href="/delete/{{id}}" class="btn">Supprimer</a>
+         <a href="/annonce/{{id}}" class="btn">Voir</a> 
+        </li>
+      {{/annonces}}
+    </ul>
+    <a href="/create" class="btn"> Créer </a>
+  </div>
+</body>
+</html>

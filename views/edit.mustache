@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Modifier une Annonce</title>
+  <link rel="stylesheet" href="/style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Modifier une Annonce</h1>
+    <form method="POST" action="/edit-form/{{findOne.id}}" class="edit-form">
+      <label for="titre">Titre :</label>
+      <input type="text" id="titre" name="titre" value="{{findOne.titre}}" required><br>
+
+      <label for="description">Description :</label>
+      <textarea id="description" name="description" required>{{findOne.description}}</textarea><br>
+
+      <label for="prix">Prix :</label>
+      <input type="text" id="prix" name="prix" value="{{findOne.prix}}" required><br>
+
+      <label for="categorie">Catégorie :</label>
+      <input type="text" id="categorie" name="categorie" value="{{findOne.categorie}}" required><br>
+
+      <label for="localisation">Localisation :</label>
+      <input type="text" id="localisation" name="localisation" value="{{findOne.localisation}}" required><br>
+
+      <label for="vendeur">Vendeur :</label>
+      <input type="text" id="vendeur" name="vendeur" value="{{findOne.vendeur}}" required><br>
+
+      <button type="submit" class="btn">Modifier</button>
+    </form>
+    <p><a href="/" class="btn">Retour à la liste des annonces</a></p>
+  </div>
+</body>
+</html>

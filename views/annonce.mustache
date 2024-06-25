@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail Annonce</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <div class="container">
+    <div class="annonce-detail">
+      <h1>{{findOne.titre}}</h1>
+      <p><strong>Description:</strong> {{findOne.description}}</p>
+      <p><strong>Prix:</strong> {{findOne.prix}}</p>
+      <p><strong>Catégorie:</strong> {{findOne.categorie}}</p>
+      <p><strong>Localisation:</strong> {{findOne.localisation}}</p>
+      <p><strong>Vendeur:</strong> {{findOne.vendeur}}</p>
+      <a href="/" class="btn">Retour à la liste des annonces</a>
+      <a href="/edit/{{findOne.id}}" class="btn">Editer</a>
+
+    </div>
+</body>
+</html>
